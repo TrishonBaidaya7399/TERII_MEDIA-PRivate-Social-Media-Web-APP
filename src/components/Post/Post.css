@@ -1,0 +1,106 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--cardColor);
+  border-radius: 1rem;
+  gap: 1rem;
+}
+.Post > img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.postReact {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+/* For see more option */
+/* .detail span {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail .see-more {
+  color: var(--orange);
+  cursor: pointer;
+  display: block;
+  white-space: pre-wrap;
+  overflow: visible;
+  margin-top: 0.5rem;
+  background: transparent;
+}
+
+.detail .see-more:hover {
+  text-decoration: underline;
+} */
+.cuttoff_text {
+  --max-lines: 3;
+  --line-height: 1.4;
+  line-height: var(--line-height);
+  max-height: calc(var(--max-lines) * 1rem * var(--line-height));
+  overflow: hidden;
+  position: relative;
+}
+.cuttoff_text:has(+ .expand-btn:not(:checked))::before {
+  content: "";
+  position: absolute;
+  height: calc(1rem * var(--line-height));
+  width: 100%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, white);
+}
+.expand-btn {
+  appearance: none;
+  border: 2px solid var(--orange);
+  padding: 3px;
+
+  border-radius: 0.25rem;
+  cursor: pointer;
+  /* margin-top: 1rem; */
+  width: 5rem;
+}
+.expand-btn:hover {
+  background-color: transparent;
+}
+.expand-btn::before {
+  content: "See more";
+  color: var(--orange);
+  font-weight: 500;
+  /* background: var(--orange); */
+  display: flex;
+  justify-content: center;
+}
+.expand-btn:checked::before {
+  content: "See less";
+  color: var(--orange);
+  font-weight: 500;
+
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.cuttoff_text:has(+ .expand-btn:checked) {
+  max-height: none;
+}
+.deleteBtn {
+  display: block;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.rd-button {
+  height: 3rem;
+  width: 80%;
+  align-self: center;
+  margin: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
