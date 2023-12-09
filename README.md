@@ -5,7 +5,7 @@
   <img src="https://github.com/TrishonBaidaya7399/TrishonBaidaya7399/blob/main/terii%20banner.jpg?raw=true" />
 </a>
 
-##Technologies Used:
+## Technologies Used:
 - React, Node, Express, HTML, CSS, JS
 - MongoDB, Firebase
 - Bootstrap5
